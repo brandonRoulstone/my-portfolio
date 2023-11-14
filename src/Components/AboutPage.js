@@ -1,10 +1,27 @@
-import Image from 'react-bootstrap/Image';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShop } from '@fortawesome/free-solid-svg-icons';
+import { faAddressCard } from '@fortawesome/free-solid-svg-icons';
 const AboutPage = () => {
   return (
-    <>
-    <Image src="https://cdn.pixabay.com/photo/2016/10/10/14/13/dog-1728494_640.png" height="40%" width="30%" fluid />
-    </>
+    <div className="about-container">
+     <div className="about-intro">
+       <h1 className="about-txt">About me</h1>
+      </div>
+      <div className="icons-btn-container">
+        <div className="icons-md">
+          <button className="icon-btn"><FontAwesomeIcon icon={faShop} /></button>
+          <button className="icon-btn"><FontAwesomeIcon icon={faAddressCard} /></button>
+          <button className="icon-btn"><FontAwesomeIcon icon={faShop} /></button>
+          <button className="icon-btn"><FontAwesomeIcon icon={faAddressCard} /></button>
+        </div>
+      </div>
+     <div className="about-bg">
+       <div className="img-img">
+         
+       </div>
+     </div>
+    
+    </div>
   )
 }
 

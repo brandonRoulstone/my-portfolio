@@ -4,7 +4,7 @@ import "./Styles/Style.css";
 import LandingPage from "./Components/LandingPage";
 import Header from "./Components/Navbar";
 import AboutPage from "./Components/AboutPage";
-import MyProjects from "./Components/MyProjects";
+import Footer from "./Components/Footer";
 
 function App() {
 
@@ -17,12 +17,12 @@ function App() {
           <Routes>
 
             <Route path="/" exact element={<LandingPage />}></Route>
-            <Route path="/projects" element={<MyProjects />}></Route>
             <Route path="/about" element={<AboutPage />}></Route>
             
           </Routes>
       </Router>
-
+      
+      <Footer />
     </div>
   );
 }
