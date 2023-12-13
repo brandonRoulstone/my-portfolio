@@ -1,73 +1,56 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-import Tooltip from 'react-bootstrap/Tooltip';
+import LinkBtn from './LinkComponents/LinkBtn';
 
 const LandingPage = () => {
 
-  const renderGithub = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
-      Github
-    </Tooltip>
-  );
+  const textContent = {
+    intro: "Software developer & designer",
+  }
 
-  const renderLinkedin = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
-      Linkedin
-    </Tooltip>
-  );
-
-  const renderEmail = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
-      Email me
-    </Tooltip>
-  );
 
   return (
+ <>
     <div className="Landing-container">
-      <div className="container-fluid" id="childContainer">
-        <h1 className="introduction">
-          <h2 id="abth3">Hi, I am <span className="">Brandon Roulstone</span></h2>
-        </h1>
-        <h3 className="fs-1">Aspiring software developer & designer</h3>
+
+      {/* <div className=".inner-cursor"></div> */}
+      
+      <div className="container-fluid m-5 p-5" id="childContainer">
+        
+        <div className="container-fluid">
+
+        <div className="container d-flex justify-content-center fw-semibold p-3 fs-1">
+          
+          <div id="abth3" className="text-white"> I'm B r a n d o n 👋🏻</div>
+
+        </div>
+
+        </div>
+
+        <h3 className="fs-1 text-white">{textContent.intro}</h3>
+
         <div className="landing-body">
+
           <div className="content-pg-lnd">
 
             <div className="landing-content">
 
-              <Button className="btn-btn"><i class="fa-solid fa-computer-mouse fa-fade" style={{"color": "#000000"}}></i></Button>
+              <Button className="btn-btn" >
+                
+              </Button>
+
+              <div className="container p-3">
+              <LinkBtn />
+              </div>
 
             </div>
 
           </div>
 
         </div>
-        
-        <div className="text-white d-flex justify-content-start container-fluid">            
-          <OverlayTrigger
-            placement="top"
-            delay={{ show: 250, hide: 400 }}
-            overlay={renderGithub}
-          >
-            <Button className='btn-link' href="https://github.com/brandonRoulstone"><i className="fa-brands fa-github fa-lg" style={{"color": "black"}}></i></Button>
-          </OverlayTrigger>
-          <OverlayTrigger
-            placement="top"
-            delay={{ show: 250, hide: 400 }}
-            overlay={renderLinkedin}
-          >
-            <Button className='btn-link2' href="https://github.com/brandonRoulstone"><i class="fa-brands fa-linkedin fa-lg3" style={{"color": "#003ea8"}}></i></Button>
-          </OverlayTrigger>
-          <OverlayTrigger
-            placement="top"
-            delay={{ show: 250, hide: 400 }}
-            overlay={renderEmail}
-          >
-            <Button className='btn-link3' href="https://github.com/brandonRoulstone"><i class="fa-solid fa-envelope fa-lg" style={{"color": "black"}}></i></Button>
-          </OverlayTrigger>
-        </div>
       </div>
     </div>
+   </>
   );
 }
 

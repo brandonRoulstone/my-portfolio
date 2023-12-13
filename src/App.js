@@ -1,28 +1,33 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./Styles/Style.css";
 import LandingPage from "./Components/LandingPage";
-import Header from "./Components/Navbar";
-import AboutPage from "./Components/AboutPage";
+import NavigationFunc from "./Components/Navbar";
+import MainSection from "./Components/MainSection";
 import Footer from "./Components/Footer";
-
-function App() {
-
+import Cursor from './Components/Cursor/Cursor';
+const App = () => {
+  
   return (
     <div className="App">
-      <Router>
 
-         <Header />
+      <Cursor />
 
-          <Routes>
+        <NavigationFunc />
 
-            <Route path="/" exact element={<LandingPage />}></Route>
-            <Route path="/about" element={<AboutPage />}></Route>
-            
-          </Routes>
-      </Router>
+      <div id="home">
+
+        <LandingPage />
+
+      </div>
+
+      <div id="about">
+        
+        <MainSection />
+
+      </div>
       
       <Footer />
+      
     </div>
   );
 }
