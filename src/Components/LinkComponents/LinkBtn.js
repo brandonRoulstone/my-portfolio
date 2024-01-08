@@ -17,9 +17,9 @@ const LinkBtn = () => {
 
   const renderGithub = (props) => (
 
-    <Tooltip id="button-tooltip" className="bg-success justify-content-center" data-mdb-toggle="animation" data-mdb-animation-reset="true" data-mdb-animation="fade-in-up" {...props}>
+    <Tooltip id="button-tooltip" className="bg-transparent justify-content-center" data-mdb-toggle="animation" data-mdb-animation-reset="true" data-mdb-animation="fade-in-up" {...props}>
 
-      <Image src="https://i.postimg.cc/DZzBzf3b/github-154769-1280.png" thumbnail  width="30px" height="30px"/>
+      <Image src="https://cdn-thumbs.imagevenue.com/51/78/95/ME17G09K_t.png" thumbnail  width="30px" height="30px"/>
 
       <br />
 
@@ -31,9 +31,9 @@ const LinkBtn = () => {
 
   const renderLinkedin = (props) => (
 
-    <Tooltip id="button-tooltip" className="bg-primary" {...props}>
+    <Tooltip id="button-tooltip" className="bg-transparent" {...props}>
 
-      <Image src="https://i.postimg.cc/nrTCdxPp/linked-in-2668700-640.webp" thumbnail  width="30px" height="30px"/>
+      <Image src="https://cdn-thumbs.imagevenue.com/0a/b6/2d/ME17G093_b.png" thumbnail  width="30px" height="30px"/>
 
       <br />
 
@@ -44,9 +44,9 @@ const LinkBtn = () => {
   );
 
   const renderEmail = (props) => (
-    <Tooltip id="button-tooltip" className="bg-danger" {...props}>
+    <Tooltip id="button-tooltip" className="bg-transparent" {...props}>
 
-      <Image src="https://i.postimg.cc/J03NctJn/gmail-1162901-1280.webp" thumbnail  width="30px" height="30px"/>
+      <Image src="https://cdn.pixabay.com/photo/2016/01/26/17/15/gmail-1162901_1280.png" thumbnail  width="30px" height="30px"/>
 
       <br />
 
@@ -57,13 +57,9 @@ const LinkBtn = () => {
 
   return (
     <>
-      <div className="text-white d-flex justify-content-center container-fluid">   
+      <div className="text-white d-flex justify-content-start container-fluid">   
 
-        <OverlayTrigger
-          placement="left"
-          delay={{ show: 250, hide: 400 }}
-          overlay={renderGithub}
-        >
+        <OverlayTrigger placement="bottom" delay={{ show: 250, hide: 400 }} overlay={renderGithub}>
 
         <Button className='btn-link' href="https://github.com/brandonRoulstone">
           <i className="fa-brands fa-github fa-lg" style={{"color": "black"}}></i>
@@ -71,25 +67,17 @@ const LinkBtn = () => {
 
         </OverlayTrigger>
 
-        <OverlayTrigger
-          placement="bottom"
-          delay={{ show: 250, hide: 400 }}
-          overlay={renderLinkedin}
-        >
+        <OverlayTrigger placement="bottom" delay={{ show: 250, hide: 400 }} overlay={renderLinkedin}>
 
-          <Button className='btn-link2' href="https://www.linkedin.com/in/brandon-roulstone-a8669a29b/">
+          <Button className='btn-link' href="https://www.linkedin.com/in/brandon-roulstone-a8669a29b/">
             <i className="fa-brands fa-linkedin fa-lg" style={{"color": "#003ea8"}}></i>
           </Button>
 
         </OverlayTrigger>
 
-        <OverlayTrigger
-          placement="right"
-          delay={{ show: 250, hide: 400 }}
-          overlay={renderEmail}
-        >
+        <OverlayTrigger placement="bottom" delay={{ show: 250, hide: 400 }} overlay={renderEmail}>
 
-          <Button className='btn-link3' href="https://github.com/brandonRoulstone">
+          <Button className='btn-link' href="https://github.com/brandonRoulstone">
             <i className="fa-solid fa-envelope fa-lg" style={{"color": "black"}}></i>
           </Button>
 

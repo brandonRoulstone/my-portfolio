@@ -4,9 +4,7 @@ import AboutPage from "./AboutPage"
 const MainSection = () => {
   return (
     <>
-
       <AboutPage />
-
     </>
   )
 }

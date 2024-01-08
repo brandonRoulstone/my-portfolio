@@ -4,12 +4,15 @@ import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Nav from 'react-bootstrap/Nav';
 import { useState } from 'react';
+import ProjectsSec from './Projects';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faProjectDiagram } from '@fortawesome/free-solid-svg-icons';
 
 
 const NavigationFunc = () => {
 
   const letterObjects ={
-    _Head: "Brandon's Portfolio"
+    _Head: "BR Portfolio~"
   }
 
   const offcanvasTxt = {
@@ -103,16 +106,18 @@ function OffCanvasExample({ ...props }) {
 
       <Offcanvas show={show} onHide={handleClose} {...props} className="projects">
 
-        <Offcanvas.Header closeButton>
+        <Offcanvas.Header closeButton className="bg-dark">
 
-          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+          <Offcanvas.Title className="text-white fs-4 bg-black rounded-2 shadow px-3" title='my-projects'><FontAwesomeIcon icon={faProjectDiagram} /> Welcome to my projects</Offcanvas.Title>
 
         </Offcanvas.Header>
 
         <Offcanvas.Body>
 
-          Some text as placeholder. In real life you can have the elements you
-          have chosen. Like, text, images, lists, etc.
+        <div className="d-flex justify-content-center">
+          <ProjectsSec /> 
+        </div>
+
         </Offcanvas.Body>
 
       </Offcanvas>
